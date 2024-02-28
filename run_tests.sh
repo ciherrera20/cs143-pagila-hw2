@@ -15,6 +15,12 @@ for problem in sql/*; do
         echo pass
     else
         echo fail
+        echo $result
+        cat $result
+        echo $expected
+        cat $expected
+        echo diff
+        diff $expected $result
         failed=true
     fi
 done
